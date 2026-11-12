@@ -6,4 +6,8 @@ const nextConfig = {
   reactCompiler: true,
 };
 
-module.exports = withGTConfig(nextConfig);
+// URL locale prefixes (/en, /ko, /de, /ja, /pt-BR) are resolved by
+// gt-next's App Router proxy and the [locale] route segment.
+module.exports = withGTConfig(nextConfig, {
+  experimentalLocaleResolution: true,
+});

@@ -49,6 +49,8 @@ npm run dev
 
 Open http://localhost:3000.
 
+For automatic translation updates during production builds, add a General Translation API key as the `GT_API_KEY` environment variable. Without this key, the build continues using translation snapshots already committed to the repository.
+
 ## Deployment
 
 The project can be deployed to a Next.js-compatible host. Configure the production domain as `aipctool.com` and ensure the host has the required environment variables for optional multiplayer services before launch.

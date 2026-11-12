@@ -484,7 +484,7 @@ export default function HomePage() {
             <T>Build Your Dream City. Create. Build. Explore.</T>
           </p>
           
-          {/* Sprite Gallery - smaller on mobile, contained */
+          {/* Sprite Gallery - smaller on mobile, contained */}
           <div className="mb-4 sm:mb-6 flex-shrink-0">
             <SpriteGallery count={9} cols={3} cellSize={56} />
           </div>

@@ -64,6 +64,17 @@ export const metadata: Metadata = {
     statusBarStyle: 'black-translucent',
     title: 'Dreamora',
   },
+  alternates: {
+    canonical: '/',
+    languages: {
+      en: '/en',
+      ko: '/ko',
+      de: '/de',
+      ja: '/ja',
+      'pt-BR': '/pt-BR',
+      'x-default': '/en',
+    },
+  },
   formatDetection: { telephone: false },
 };
 

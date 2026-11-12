@@ -597,3 +597,17 @@ html, body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   }
 }
+
+
+/* Dreamora multilingual typography with system-safe fallbacks */
+html:lang(en),
+html:lang(de),
+html:lang(pt-BR) {
+  font-family: Inter, "DM Sans", system-ui, sans-serif;
+}
+html:lang(ko) {
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+html:lang(ja) {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}

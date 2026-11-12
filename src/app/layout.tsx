@@ -2,57 +2,80 @@ import type { Metadata, Viewport } from 'next';
 import { Playfair_Display, DM_Sans } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
-import { getLocale } from "gt-next/server";
-import { GTProvider } from "gt-next";
+import { getLocale } from 'gt-next/server';
+import { GTProvider } from 'gt-next';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-display',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900']
+  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-  weight: ['400', '500', '600', '700']
+  weight: ['400', '500', '600', '700'],
 });
 
+const siteUrl = 'https://aipctool.com';
+const title = 'Dreamora — Build Your Dream City';
+const description = 'Create, build, and explore your own living isometric city. Design neighborhoods, manage resources, and watch traffic, trains, planes, and citizens bring your dream city to life.';
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://iso-city.com'),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: 'ISOCITY — Metropolis Builder',
-    template: 'ISOCITY — %s',
+    default: title,
+    template: 'Dreamora — %s',
   },
-  description: 'A richly detailed isometric city builder. Build your metropolis and manage resources with cars, planes, helicopters, boats, trains, citizens, and more.',
+  applicationName: 'Dreamora',
+  description,
+  keywords: [
+    'city builder game',
+    'online city building game',
+    'isometric city builder',
+    'free city simulator',
+    'build your own city',
+    'browser city building game',
+  ],
+  alternates: {
+    canonical: '/',
+    languages: {
+      en: '/?lang=en',
+      ko: '/?lang=ko',
+      de: '/?lang=de',
+      ja: '/?lang=ja',
+      'pt-BR': '/?lang=pt-BR',
+      'x-default': '/',
+    },
+  },
   openGraph: {
-    title: 'ISOCITY — Metropolis Builder',
-    description: 'A richly detailed isometric city builder. Build your metropolis and manage resources with cars, planes, helicopters, boats, trains, citizens, and more.',
+    title,
+    description,
     type: 'website',
-    siteName: 'IsoCity',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1179,
-        height: 1406,
-        type: 'image/png',
-        alt: 'ISOCITY - Isometric city builder game screenshot'
-      }
-    ],
+    siteName: 'Dreamora',
+    url: siteUrl,
+    images: [{
+      url: '/opengraph-image.png',
+      width: 1179,
+      height: 1406,
+      type: 'image/png',
+      alt: 'Dreamora isometric city builder game',
+    }],
   },
   twitter: {
     card: 'summary_large_image',
+    title,
+    description,
     images: ['/opengraph-image.png'],
   },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'IsoCity'
+    title: 'Dreamora',
   },
-  formatDetection: {
-    telephone: false
-  }
+  formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
@@ -61,30 +84,24 @@ export const viewport: Viewport = {
   maximumScale: 1,
   userScalable: false,
   viewportFit: 'cover',
-  themeColor: '#0f1219'
+  themeColor: '#0f1219',
 };
 
-export default async function RootLayout({ children }: {children: React.ReactNode;}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-  <html className={`dark ${playfair.variable} ${dmSans.variable}`} lang={await getLocale()}>
+    <html className={`dark ${playfair.variable} ${dmSans.variable}`} lang={await getLocale()}>
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="theme-color" content="#0f1219" />
         <link rel="apple-touch-icon" href="/assets/buildings/residential.png" />
-        {/* Preload critical game assets - WebP for browsers that support it */}
-        <link
-        rel="preload"
-        href="/assets/sprites_red_water_new.webp"
-        as="image"
-        type="image/webp" />
-
-        <link
-        rel="preload"
-        href="/assets/water.webp"
-        as="image"
-        type="image/webp" />
-
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" href="/assets/sprites_red_water_new.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/assets/water.webp" as="image" type="image/webp" />
       </head>
-      <body className="bg-background text-foreground antialiased font-sans overflow-hidden"><GTProvider>{children}<Analytics /></GTProvider></body>
+      <body className="bg-background text-foreground antialiased font-sans overflow-hidden">
+        <GTProvider>{children}<Analytics /></GTProvider>
+      </body>
     </html>
   );
 }

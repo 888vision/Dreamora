@@ -1,6 +1,12 @@
 {
   "$schema": "https://assets.gtx.dev/config-schema.json",
-  "locales": ["en", "ko", "de", "ja", "pt-BR"],
+  "locales": [
+    "en",
+    "ko",
+    "de",
+    "ja",
+    "pt-BR"
+  ],
   "defaultLocale": "en",
   "files": {
     "gt": {
@@ -8,5 +14,5 @@
     }
   },
   "framework": "next-app",
-  "_versionId": "dreamora-five-locale"
+  "_versionId": "45ef9384fc0bb0ff3b86d37b1542215aa67b719c07735c5dc172bca669832049"
 }

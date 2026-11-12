@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/translate-if-configured.mjs && npm run compress-images && next build",
+    "build": "node scripts/translate-if-configured.mjs && npm run compress-images && next build --webpack",
     "start": "next start",
     "lint": "eslint .",
     "crop-screenshots": "bash scripts/crop-screenshots.sh",

@@ -1,76 +1,60 @@
-# IsoCity & IsoCoaster
+# Dreamora
 
-Open-source isometric city and theme park builder built with NextJS, TypeScript, and HTML5 Canvas.
+**Build Your Dream City. Create. Build. Explore.**
 
-<table>
-<tr>
-<td width="50%" align="center"><strong>IsoCity</strong></td>
-<td width="50%" align="center"><strong>IsoCoaster</strong></td>
-</tr>
-<tr>
-<td><img src="public/readme-image.png" width="100%"></td>
-<td><img src="public/readme-coaster.png" width="100%"></td>
-</tr>
-<tr>
-<td align="center">City builder with trains, planes, cars, and pedestrians<br><a href="https://iso-city.com">iso-city.com</a></td>
-<td align="center">Theme park builder with roller coasters, rides, and guests<br><a href="https://iso-coaster.com">iso-coaster.com</a></td>
-</tr>
-</table>
+Dreamora is an online isometric city-building and simulation game. Build a city your way, shape neighborhoods, manage resources, and watch a living world of vehicles, trains, planes, and pedestrians come to life.
 
-Made with [Cursor](https://cursor.com).
+Dreamora preserves the original open-source game's city-building and theme-park experiences while presenting them under a new brand and with a five-language interface.
 
-## Features
+## Play
 
--   **Isometric Rendering Engine**: Rendering with HTML5 Canvas (`CanvasIsometricGrid`) capable of handling complex depth sorting, layer management, and both image and canvas sprites.
--   **Dynamic Simulation**:
-    -   **Traffic System**: Autonomous vehicles including cars, trains, planes, buses, and seaplanes.
-    -   **Trains, bridges, buses, barges, and more**: Vehicles will navigate throughout your city and respect traffic lights.
-    -   **Pedestrian System**: Pathfinding and crowd simulation for city inhabitants.
-    -   **Economy & Resources**: Resource management, zoning (Residential, Commercial, Industrial), and city growth logic.
--   **Interactive Grid**: Tile-based placement system for buildings, roads, rail, parks, utilities, and more.
--   **State Management**: Save and load functionality for multiple cities.
--   **Responsive Design**: Mobile-friendly interface with touch friendly controls, drawers, and toolbars.
+- Website: https://aipctool.com
+- City builder: https://aipctool.com/
+- Theme park builder: https://aipctool.com/coaster
 
-## Tech Stack
+## Languages
 
--   **Framework**: [Next.js 16](https://nextjs.org/)
--   **Language**: [TypeScript](https://www.typescriptlang.org/)
--   **Graphics**: HTML5 Canvas (No external game engine libraries; pure native implementation).
--   **Icons**: Lucide React icons.
+- English (United States): `en`
+- 한국어: `ko`
+- Deutsch: `de`
+- 日本語: `ja`
+- Português (Brasil): `pt-BR`
 
-## Getting Started
+The language selector is available on the game landing screen.
 
-### Prerequisites
+## Game features
 
--   Node.js (v18 or higher)
--   npm
+- Isometric HTML5 Canvas rendering with depth sorting and layered sprites.
+- City simulation with autonomous cars, buses, trains, planes, seaplanes, and pedestrians.
+- Roads, railways, bridges, buildings, parks, utilities, and zoning.
+- Residential, commercial, and industrial development, resources, and city growth.
+- Save and load multiple cities.
+- Multiplayer/co-op city sessions.
+- Responsive desktop and touch-friendly mobile controls.
+- A separate theme-park building mode with rides, roller coasters, and guests.
 
-### Installation
+## Technology
 
-1.  **Clone the repository**
-    ```bash
-    git clone https://github.com/amilich/isometric-city.git
-    cd isometric-city
-    ```
+- Next.js 16, React 19, TypeScript
+- HTML5 Canvas
+- Tailwind CSS and Radix UI
+- General Translation (gt-next)
 
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
+## Local development
 
-3.  **Run the development server**
-    ```bash
-    npm run dev
-    ```
+```bash
+npm install
+npm run dev
+```
 
-4.  **Open the game**
-    Visit [http://localhost:3000](http://localhost:3000) to play IsoCity. 
-    Visit [http://localhost:3000/coaster](http://localhost:3000/coaster) for IsoCoaster.
+Open http://localhost:3000.
 
-## Contributing
+## Deployment
 
-Contributions, bug reports, and feature requests are welcome.
+The project can be deployed to a Next.js-compatible host. Configure the production domain as `aipctool.com` and ensure the host has the required environment variables for optional multiplayer services before launch.
 
-## License
+## Credits and license
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Dreamora is a modified and rebranded distribution of [IsoCity & IsoCoaster](https://github.com/amilich/isometric-city) by its original author and contributors. The upstream project is distributed under the MIT License. The original copyright and license notice is retained in the `LICENSE` file. Third-party assets and services remain subject to their respective licenses and terms.
+
+Dreamora branding and website modifications are maintained in this repository; they do not imply authorship of the original game engine.

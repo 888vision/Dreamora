@@ -378,6 +378,28 @@
           }
         }
       }
+    },
+    "brc_iwa5a326unoi9lfuqg92821z": {
+      "879f3a5f954ee8b75bf1e91f4ea9916b41c933e5beba7eb6362647a637c9c66d": {
+        "55b70ee7bd60de28d82ee43221253b229f567181c73e44fc59cf3392d517f0a9": {
+          "pt-BR": {
+            "updatedAt": "2026-11-12T03:02:37.444Z",
+            "postProcessHash": "b2abe0babdf66721ab78257f01db52c97e486bf5011a51ef0f9321572bc37f1a"
+          },
+          "de": {
+            "updatedAt": "2026-11-12T03:02:37.446Z",
+            "postProcessHash": "19359c671cf6ec0a62b3ffdabd99ffb26b4cada11bd549b9d9a0c77e8da1f0a8"
+          },
+          "ko": {
+            "updatedAt": "2026-11-12T03:02:37.447Z",
+            "postProcessHash": "3aa83969a28ed6518ef35ec41155e69d5f0ed5473733b0c52dce8c208f857727"
+          },
+          "ja": {
+            "updatedAt": "2026-11-12T03:02:37.448Z",
+            "postProcessHash": "f0fd94eb50252624b83a2f810fae1ce26c8781716e585c354ecc40f375fa1840"
+          }
+        }
+      }
     }
   }
 }

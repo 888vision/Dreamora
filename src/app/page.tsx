@@ -480,8 +480,11 @@ export default function HomePage() {
           <h1 className="text-4xl sm:text-5xl font-light tracking-wider text-white/90 mb-4 sm:mb-6 flex-shrink-0">
             Dreamora
           </h1>
+          <p className="max-w-xs text-center text-sm sm:text-base text-white/55 tracking-wide mb-4 flex-shrink-0">
+            <T>Build Your Dream City. Create. Build. Explore.</T>
+          </p>
           
-          {/* Sprite Gallery - smaller on mobile, contained */}
+          {/* Sprite Gallery - smaller on mobile, contained */
           <div className="mb-4 sm:mb-6 flex-shrink-0">
             <SpriteGallery count={9} cols={3} cellSize={56} />
           </div>
@@ -596,6 +599,9 @@ export default function HomePage() {
             <h1 className="text-8xl font-light tracking-wider text-white/90">
               Dreamora
             </h1>
+            <p className="max-w-lg text-center lg:text-left text-lg text-white/55 tracking-wide -mt-8">
+              <T>Build Your Dream City. Create. Build. Explore.</T>
+            </p>
             <div className="flex flex-col gap-3">
               <Button 
                 onClick={() => setShowGame(true)}

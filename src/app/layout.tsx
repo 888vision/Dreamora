@@ -39,17 +39,6 @@ export const metadata: Metadata = {
     'build your own city',
     'browser city building game',
   ],
-  alternates: {
-    canonical: '/',
-    languages: {
-      en: '/?lang=en',
-      ko: '/?lang=ko',
-      de: '/?lang=de',
-      ja: '/?lang=ja',
-      'pt-BR': '/?lang=pt-BR',
-      'x-default': '/',
-    },
-  },
   openGraph: {
     title,
     description,
